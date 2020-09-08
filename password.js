@@ -8,3 +8,27 @@ var generatePassword = function generatePassword(length, charset) {
       }
       return password
 }
+
+var length = 10,
+    number = 1
+var argv = process.argv
+
+if (!argv[2] || !argv[3]) {
+  console.log('Provide an argument..')
+  process.exit(1)
+
+}
+
+if (argv[2]) {
+  length = parseInt(argv[2], 10)
+}
+
+if (argv[3]) {
+  length = parseInt(argv[3], 10)
+}
+
+for (var i = 1; i <=number; i++) {
+  console.log(generatePassword(length))
+}
+
+process.exit(0)
